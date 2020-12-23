@@ -85,3 +85,9 @@ class HelperFunction ():
             raise Exception("Wrong entry: Not a valid month")
         for season, months in season_dict.items(): 
             if x in months: return season
+    def return_quantile (self,Pseries,x):
+        """
+        Input: A pandas Series and a quantile  percentage needed. 
+        Output: The quantile range needed
+        """
+        return Pseries.quantile(x)
